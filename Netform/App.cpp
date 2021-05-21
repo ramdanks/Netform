@@ -1,13 +1,14 @@
 #include <wx/wx.h>
+#include "ReportFrame.h"
 
 class App : public wxApp
 {
 public:
 	virtual bool OnInit() override
 	{
-		wxDialog d(nullptr, wxID_ANY, "Hello World");
-		d.ShowModal();
-		return false;
+		auto* f = new ReportFrame(nullptr);
+		f->Show();
+		return true;
 	}
 };
 
